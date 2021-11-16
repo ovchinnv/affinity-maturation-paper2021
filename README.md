@@ -4,7 +4,7 @@
  This repository contains the code and use cases to reproduce the data
 shown in the figures of the paper **A coarse-grained model of affinity
 maturation indicates the importance of B-cell receptor avidity in epitope
-subdominance**, 2021 by *V. Ovchinnikov and M. Karplus*.
+subdominance**, 2021 by *V. Ovchinnikov and M. Karplus* (submitted).
 
 ## Code Summary
 
