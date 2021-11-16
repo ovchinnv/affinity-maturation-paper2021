@@ -1,0 +1,126 @@
+\documentclass[utf8]{frontiers_suppmat} % for all articles
+\usepackage{url,hyperref,lineno,microtype}
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage{amssymb}
+\usepackage{soul} % improved hyphenation package
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx,epsfig}
+\usepackage[version=4]{mhchem}
+
+% Leave a blank line between paragraphs instead of using \\
+\newcommand{\pd}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\td}[2]{\frac{d {#1}}{d {#2}}}
+
+%\newcommand{\mk}[1]{\textbf{[MK:#1]}}
+%\newcommand{\vo}[1]{\textit{#1}}
+%\newcommand{\comment}[1]{\textit{[#1]}}
+\newcommand{\mk}[1]{} % nothing
+\newcommand{\vo}[1]{#1} % text as is
+\newcommand{\comment}[1]{} % nothing
+\newcommand{\ttau}{\left(\theta^*\left(\tau\right)\right)}
+\newcommand{\tstar}{\theta^*}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\rhatcom}{\widehat{r_{COM}}}
+\newcommand{\rOhatcom}{\widehat{r_{O,COM}}}
+\newcommand{\rhat}{\uu{r}}
+\newcommand{\Rhat}{\widehat{R}}
+\newcommand{\rOhat}{\widehat{r}_O}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\snorm}[1]{\lvert#1\rvert}
+\newcommand{\pdo}[1]{\frac{\partial{#1}}{\partial{\left(\cdot\right)}}}
+\newcommand{\jsum}{\sum_{j=1}^N}
+\newcommand{\isum}{\sum_{i=1}^M}
+\newcommand{\ksum}{\sum_{k=1}^N}
+\newcommand{\nsum}{\sum_{n=1}^N}
+\newcommand{\f}{{\bf f}}
+\newcommand{\g}{{\bf g}}
+\newcommand{\h}{{\bf h}}
+\renewcommand{\a}{\alpha}
+\newcommand{\uu}[1]{{\boldsymbol #1}}
+\newcommand{\brho}{\uu{\rho}}
+\newcommand{\bphi}{\uu{\phi}}
+\newcommand{\hphi}{\uu{\phi}}
+\newcommand{\hpsi}{\uu{\psi}}
+\newcommand{\nhat}{\uu{n}}
+\newcommand{\uhat}{\uu{u}}
+\newcommand{\hn}{{\nhat}}
+\newcommand{\bn}{\uu{n}}
+\newcommand{\hbphi}{\widehat{\uu{\phi}}}
+\newcommand{\p}{\hphi_{i-1}}
+\renewcommand{\o}{\hphi_{i}}
+\newcommand{\q}{\hphi_{i+1}}
+\newcommand{\bnu}{\uu{\nu}}
+\newcommand{\bX}{\uu{X}}
+\newcommand{\bx}{\uu{x}}
+\newcommand{\by}{\uu{y}}
+\newcommand{\br}{\uu{r}}
+\newcommand{\rb}{\uu{r}}
+\newcommand{\px}{\uu{P}}
+\newcommand{\bq}{\uu{q}}
+\newcommand{\mass}{\mathcal{M}}
+\newcommand{\C}{A}
+\newcommand{\A}{\C_{i-1}}
+\renewcommand{\O}{\C_{i}}
+\newcommand{\B}{\C_{i+1}}
+
+\newcommand{\bXL}{{\overline{\bX}}_L}
+\newcommand{\tb}{\textbf{\em t}}
+\newcommand{\RMSD}{\rho_m({\bx,\bx_0})}
+\newcommand{\RMSDsq}{\rho^2_m({\bx,\bx_0})}
+\def\Cterm {{\it Cterm}}
+\def\Nterm {{\it Nterm}}
+\def\ie {{\it i.e.}}
+\def\etal {{\it et al.}}
+\def\eg {{\it e.g.}}
+\def\vs {{\it vs.}}
+\def\aka {{\it a.k.a.}}
+\def\via {{\it via}}
+\def\insilico {{\it in silico}}
+\def\apriori {{\it a priori}}
+\def\aposteriori {{\it a posteriori}}
+\def\perse {{\it per se}}
+\def\adhoc {{\it ad hoc}}
+\newcommand{\eq}[1] {Eq.~(\ref{eq:#1})}
+\newcommand{\Eq}[1] {Equation~(\ref{eq:#1})}
+\newcommand{\eqs}[2]{Eqs.~(\ref{eq:#1}) and~(\ref{eq:#2})}
+\newcommand{\fig}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\figs}[2]{Figs.~\ref{fig:#1} and~\ref{fig:#2}}
+\newcommand{\Figs}[2]{Figures~\ref{fig:#1} and~\ref{fig:#2}}
+\newcommand{\Fig}[1]{Figure~\ref{fig:#1}}
+\newcommand{\tab}[1]{Table~\ref{tab:#1}}
+\newcommand{\Sec}[1]{Sec.~\ref{sec:#1}}
+\renewcommand{\sec}[1]{\Sec{#1}}
+\newcommand{\sisec}[1]{\ref{sec:#1}}
+\newcommand{\SI}{SI Appendix}
+
+\newcommand{\occl}{o}
+
+\newcommand{\hide}[1]{}
+%\newcommand{\hfig}[1]{\hide{#1}}
+\newcommand{\hidesi}[1]{\hide{#1}}
+\newcommand{\hfig}[1]{#1} % unchanged
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+
+
+\begin{document}
+\onecolumn
+\firstpage{1}
+
+\title[Supplementary Material]{{\helveticaitalic{Supplementary Material}}}
+
+\maketitle
+
+\input sipre.tex
+
+\section*{Supplementary Text and Figures}
+
+\input si.tex
+
+\bibliographystyle{frontiersinHLTH&FPHY}
+\bibliography{main}
+
+\end{document}
+

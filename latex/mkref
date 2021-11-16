@@ -1,0 +1,59 @@
+#!/bin/bash
+# convert references
+
+new=main
+echo -n > $new.bib
+
+for bib in *bib ; do
+ if [[ "$bib" == "main.bib" ]]; then
+  continue;
+ fi
+ echo $bib
+ cat $bib >> $new.bib
+done
+
+# change capitalization :
+perl ~/scripts/perl/uc.pl $new
+mv ${new}U.bib $new.bib
+
+# change journal titles
+cat $new.bib | \
+sed 's/Proceedings of the National Academy of Sciences of the United States of America/Proc. Natl. Acad. Sci. USA/g' | \
+sed 's/Chemical biology \\& drug design/Chem. Biol. Drug. Des./g' | \
+sed 's/{PROTEINS}:Structure, Function, and Genetics/PROTEINS: Struct. Func. Genet./g' | \
+sed 's/U.S.A./USA/g' | \
+sed 's/Journal of Medicinal Chemistry/J. Med. Chem/g' | \
+sed 's/Journal of structural biology/J. Struc. Biol/g' | \
+sed 's/Bioorganic \\& medicinal chemistry/Bioorganic. Med. Chem/g' | \
+sed 's/Bioorganic \\& Medicinal Chemistry/Bioorganic. Med. Chem./g' | \
+sed 's/Journal of the American Chemical Society/J. Am. Chem. Soc./g'| \
+sed 's/Physical Chemistry Chemical Physics/Phys. Chem. Chem. Phys./g'| \
+sed 's/The Journal of chemical physics/J. Chem. Phys./g' |\
+sed 's/The Journal of Chemical Physics/J. Chem. Phys./g' |\
+sed 's/Journal of chemical theory and computation/J. Chem. Theor. Comput./g' |\
+sed 's/The Journal of physical chemistry/J. Phys. Chem./g' |\
+sed 's/The Journal of biological chemistry/J. Biol. Chem./g' |\
+sed 's/Journal of computational chemistry/J. Comput. Chem./g' |\
+sed 's/Biophysical chemistry/Biophys. Chem./g' |\
+sed 's/Biophysical journal/Biophys. J./g' |\
+sed 's/Biophysical Journal/Biophys. J./g' |\
+sed 's/Biochimica et biophysica acta/Biochim. Biophys. Acta/g' |\
+sed 's/Annual review of biochemistry/Annu. Rev. Biochem./g' |\
+sed 's/The Journal of general physiology/J. Gen. Physiol./g'|\
+sed 's/Nature chemical biology/Nat. Chem. Biol./g'|\
+sed 's/Journal of biomolecular NMR/J. Biomol. NMR/g'|\
+sed 's/Current protocols in bioinformatics/Curr. Prot. Bioinf./g'|\
+sed 's/Current opinion in structural biology/Curr. Opin. Struct. Bio./g'|\
+sed 's/annote.=.*//g' |\
+sed 's/note.=.*//g' |\
+sed 's/isbn.=.*//g' |\
+sed 's/ISBN.=.*//g' |\
+sed 's/ISSN.=.*//g' |\
+sed 's/issn.=.*//g' |\
+sed 's/month.=.*//g' |\
+sed 's/MONTH.=.*//g' |\
+sed 's/Month.=.*//g' |\
+sed -r -E 's/Title\s*=\s*([^\,]*)(,)/Title = {\1},/' |\
+cat > _tmp.bib
+
+mv _tmp.bib $new.bib

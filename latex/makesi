@@ -1,0 +1,17 @@
+#!/bin/bash
+a=fsimain
+pdflatex -shell-escape $a.tex
+#exit
+if [ $? -ne 0 ]; then 
+ exit 1
+fi
+#################
+bibtex $a
+if [ $? -ne 0 ]; then 
+ exit 1
+fi
+#################
+pdflatex $a.tex
+pdflatex $a.tex
+
+pdftotext $a.pdf

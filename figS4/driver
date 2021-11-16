@@ -1,0 +1,30 @@
+#!/bin/bash
+# octave driver for trivial parallelization
+# simple treatment of available cores
+
+ncores=24; # on ryzen, max is 24, but I sometimes run smaller counts if the number of runs is not divisible by max core count
+icore=0;
+i=0;
+for o in 0 0.5 0.9 1 ; do
+for iter in `seq 1 50` ; do
+for k12 in 0 10 ; do
+for bcmemfr in 0.25 ; do 
+#
+  i=$((i+1)); # run counter
+#  if [ $i -ge 265 ] && [ $i -le 288 ] ; then # to rerun a subset
+#   echo $i ok
+#  octave <<< "occlusions=[$o] ; driver " >& fout$i.out &
+#  octave <<< "occlusions=[$o] ; dkps=[$dk] ; driver " >& fout$i.out &
+  nohup octave --no-gui -W <<< "occlusions=[$o] ; iters=[$iter] ; k12=$k12; bcmemfr=$bcmemfr  ; driver " >& fout$i.out &
+  icore=$((icore+1)) ;
+  if [[ $icore -ge $ncores ]] ; then
+   wait
+   icore=0; # reset
+exit
+  fi
+#  fi
+#
+done
+done
+done
+done

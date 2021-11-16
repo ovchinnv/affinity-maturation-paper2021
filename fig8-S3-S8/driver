@@ -1,0 +1,27 @@
+#!/bin/bash
+# octave driver for trivial parallelization
+# simple treatment of available cores
+
+ncores=24; # cores on localhost
+icore=0;
+i=0;
+for o in 0 0.5 0.9 1 ; do
+for dk in 1 10 100 ; do
+for k12 in 0 10 ; do
+for ag1s in "1 1 1 1 1 1" "2 1 1 2 1 1" "2 2 1.5 1.1 1 1"  ; do # concentration of AG1 across 6 simulations
+for bcmemfr in 0.25 ; do # MBC fraction for GC reinitialization
+
+  i=$((i+1)); # run counter
+  echo "Running simulation $i ..."
+  nohup octave --no-gui -W <<< "occlusions=[$o] ; dkps=[$dk] ; k12=$k12; bcmemfr=$bcmemfr; ag1s=[$ag1s] ; driver " >& fout$i.out &
+  icore=$((icore+1)) ;
+  if [[ $icore -ge $ncores ]] ; then
+   wait
+   icore=0; # reset
+  fi
+
+done
+done
+done
+done
+done

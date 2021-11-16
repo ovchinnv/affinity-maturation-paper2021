@@ -1,0 +1,43 @@
+\begin{table*}
+ \caption{
+ Model and Simulation Parameters. Time is measured in days.\\
+ $^\dagger$ Used only for computing cell counts \aposteriori, \ie~does not impact simulations;\\
+ $^\ddagger$ The affinity bounds apply only to the first binding constant $\kappa^{i1}_j$; the second binding constant
+ was defined as different multiples of the first to investigate avidity effects (see \Sec{results});\\
+ $^*$ The ratio of advantageous to deleterious but nonlethal mutations is given by $1/(1+\Lambda^2)$;
+ It is computed by logarithmic scaling of the value $\Lambda^0$=30 of \citet{kepler93} as
+ $\log \Lambda =\Delta E \log \Lambda^0 / \log 7.5$, which accounts for the difference that \citet{kepler93}
+ used an 8-point disretization,
+ or 8 affinity classes (corresponding to $\Delta E=\log 7.5$), while we use 20 classes.\\
+ }
+ \label{tab:param}
+ \begin{center}
+ \begin{tabular}{c|c|c|c}
+ Parameter & Description & Value & Source \\
+ \hline
+ $k_p^{max}$ & maximum B-cell proliferation rate & 2.2 & adjusted from 4(Ref.~\citenum{kepler93}) to fit data\cite{wittenbrink11} \\
+ $B_{max}$ & Maximum allowed B-cell count & 5000 & fit to data\cite{wittenbrink11}\\
+ $k_d$ & B-cell death rate & 4.125 & adjusted from 4\cite{kepler93} to fit data\cite{wittenbrink11}\\
+ $\mu$ & BCR mutation rate & 0.1 & \citet{oprea97} \\
+ $\sigma$ & BCRs per B-cell & $10^5$ & \citet{casten88} \\
+ $p_L$ & Fraction of lethal mutations & 0.5 & \citet{kepler93} \\
+ $C_M$ & MBC differentiation constant & 0.3 & fit to data\cite{wittenbrink11,weisel16} \\
+ $C_P$ & PC differentiation constant & 0.7 & fit to data\cite{wittenbrink11,weisel16} \\
+ $k^M_d$ & MBC death rate & 0.02 & \citet{rundell98} \\
+ $k^a_d$ & Decay of AG presented to BCRs & 0.111 & \citet{rundell98} \\
+ $k^P_d$ & PC death rate & 0.0336 & \citet{rundell98} \\
+ $k^P_M$ & PC production rate from MBCs & 0.17 & fit to data\cite{weisel16} \\
+ $k^A_p$ & AB secretion from PCs & 35000 & based on Refs~\citenum{leanderson92,zhang13} (see text) \\
+ $k^A_d$ & AB death rate & 0.069 & \citet{zhang13}\\
+ $k^a_d$ & AG removal rate & 0.011 & \citet{rundell98}\\
+ $\rho$ & activation prefactor in $h=\rho\theta^\epsilon$ & 0.94 & fit to data\cite{wittenbrink11,weisel16}\\
+ $\epsilon$ & activation exponent in $h=\rho\theta^\epsilon$ & 0.7 & fit to data\cite{wittenbrink11,weisel16}\\
+ $\xi$ & Concentration corresponding to one cell$^\dagger$ & 1e-4 & \citet{kepler93} \\
+ $\kappa^{min}$ & Smallest (nondimensional) affinity$^\ddagger$ & $7.5^{-2}$ & \citet{kepler93} \\
+ $\kappa^{max}$ & Largest (nondimensional) affinity$^\ddagger$ & $7.5^{5}$ & \citet{kepler93} \\
+ $\Lambda$ & Mutation distribution constant$^*$ & $\simeq$3.5 & based on Ref.~\cite{kepler93} \\
+ $N_\epsilon$ & Number of affinity classes & 20 & up from 8(Ref.~\citenum{kepler93}) for higher resolution\\
+ \hline
+ \end{tabular}
+ \end{center}
+\end{table*}

@@ -1,0 +1,2 @@
+11/5/21 : need better weighting between B amd MBC error, as well as pointwise error weighting
+does not want to optimize ; exponent trends to 0.9, even though tthe error increases ! This micht have to do with fitting instability
