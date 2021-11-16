@@ -194,7 +194,7 @@ mortality around the world. Universal vaccines against highly-mutable
 viruses such as influenza and HIV are therefore highly desirable.
 However, their development is complicated by the high antigenic drift of
 the viral genomes, which stems from low replicative fidelity of viral
-NA polymerases.  In the case of influenza, there also exists the possibility of antigenic `shifts',
+nucleic acid polymerases.  In the case of influenza, there also exists the possibility of antigenic `shifts',
 whereby genome segments from different viral strains are
 reassorted in a host co-infected with multiple viruses.
 %between two or more different species within the animal reservoir 
@@ -202,7 +202,7 @@ Such reassortments can result in pandemic strains against which preexisting immu
 in the affected population is low.
 For example, the H1N1 1918 influenza pandemic was likely caused by a reassortment
 between avian and human influenza strains, the 2009 H1N1 pandemic was probably
-caused by a triply reassorted human, avian, and swine strains,\cite{taubenberger19} and the
+caused by a triply reassorted human, avian, and swine strain,\cite{taubenberger19} and the
 SARS-CoV2 pandemic is believed to have originated from a bat virus adapted
 to infect humans and other hosts.\cite{andersen20}
 
@@ -230,7 +230,7 @@ at the interface between the heads of HA monomers\cite{watanabe19,bajic19}
 in a homotrimer, or in the vicinity of the sialic acid receptor\cite{raymond18,bajic19a}.
 There are different plausible reasons for the increased sequence
 conservation of these regions, such as (i) maintenance of function (\eg~the
-sialic acid receptor is required for host cell entry, and a properly
+sialic acid receptor is required for host cell entry, and properly
 folded and probably somewhat rigid HA helices are needed for fusion with the
 host cell) and (ii) a lack of evolutionary pressure to drive escape
 mutants\cite{raymond18}; the stem epitopes and the occluded epitope\cite{watanabe19}
@@ -271,7 +271,7 @@ epitope shielding by glycans,\cite{bajic19} (iv) preexisting immune
 memory,\cite{andrews15,arevalo20} poor steric accessibility of
 epitopes\cite{amitai20}, (v) inability to recruit sufficient T-cell help
 in germinal centers (GCs) due to a lack of compatible MHCII (major histocompatibility complex of type 2) epitopes,\cite{tan19}
-and (iv) entropic dominance of distracting epitopes.\cite{wang17,amitai20,glanville20}
+and (vi) entropic dominance of distracting epitopes.\cite{wang17,amitai20,glanville20}
 Although multiple effects are likely to contribute, it
 is of interest to identify the most important ones. In the
 context of influenza HA, especially in regard to the stem and the occluded
@@ -308,7 +308,7 @@ that the model is in qualitative agreement with experimental observations of
 the basic properties of GC reactions,
 and of the subdominance of influenza stem epitopes, whose predominant mode of binding to BCR/Ab
 is assumed to be monovalent.
-We then use the model to simulate multiple exposures to antigen
+We then use the model to simulate multiple exposures to an antigen
 and interpret the results to propose strategies for
 overcoming immunodominance. We suggest that bnAbs that target subdominant
 epitopes are most likely to be elicited by increasing effective epitope
@@ -344,7 +344,7 @@ dominant mode of binding of anti-HA stem antibodies (see Methods for details).
 
 \section{Results}
 \label{sec:results}
-A visual schematic of the model is given in in \fig{model}, and a brief overview is presented below. 
+A visual schematic of the model is given in \fig{model}, and a brief overview is presented below. 
 Complete details of the model equations and parametrization are given in Methods, and
 the parameter values used are listed in \tab{param}.
 Our approach is related to the differential equation models of \citet{kepler93} and listed
@@ -408,8 +408,8 @@ A: Total B-cells, B: Memory B-cell production rate, C: Plasma cell
 production rate. Experimental data for panel A was generated from the GC
 cross-sectional areas plotted in Fig.~S1B of Ref.~\citenum{wittenbrink11}, and converted to B cell counts
 as done in Ref.~\citenum{pelissier20}; \vo{The lower and upper error bars in panel A
-correspond to 30\%~and 70\%~quantiles, respectively}
-; experimental data for panels B \& C was taken from Fig.~4 of Ref.~\citenum{pelissier20}, who
+correspond to 30\%~and 70\%~quantiles, respectively};
+experimental data for panels B \& C were taken from Fig.~4 of Ref.~\citenum{pelissier20}, who
 obtained raw data from \citet{weisel16}; the error bars in B \& C correspond to approximately one SD, estimated from the 
 range of the data, which we assumed to be Gaussian-distributed.
 }
@@ -491,7 +491,7 @@ affinity of the B-cell population is several-fold lower (\fig{avidity}C).
 The delayed peak in the
 monovalent response is qualitatively consistent with the observations of \citet{tan19},
 who noted that the anti-influenza stem Ab response was delayed by a week relative
-to the overall AB response, and that the B-cell response was several-fold
+to the overall Ab response, and that the B-cell response was several-fold
 lower in magnitude.
 
 Although the noninteracting GC case is illustrative, it is idealized, because
@@ -507,11 +507,11 @@ We describe the results of the fully interacting case ($\occl$=1) next; however,
 we note that a more realistic description of the overall GC reaction would probably
 involve intermediate values of $o$. For example,
 if, in some cases, different B-cells are able to bind to different epitopes
-on the same AG simultaneously, the occlusion parameter would need to be less than 1, which would
+on the same Ag simultaneously, the occlusion parameter would need to be less than 1, which would
 correspond to decreased competition between the B-cells. Moreover, when modeling
 multiple GCs, it may be necessary to include the possibility that the Abs secreted by the plasma cells
 can diffuse across many GCs, and compete with the `local' BCRs for
-AG.\cite{zhang13} This scenario would correspond to indirect
+Ag.\cite{zhang13} This scenario would correspond to indirect
 competition between different B cell lineages in different GCs, which might
 be modeled with some optimized intermediate (though generally unknown) occlusion value.
 \vo{A possible starting point for estimating such a value
@@ -1536,7 +1536,7 @@ Number LLNL-JRNL-793877.
 \section*{Supplemental Data}
 %Supplemental methods, simulation details and results accompanying this article can be found online
 \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material}
-accompanies this article, including text appendices S1--S7 and figures S1--S13.
+accompanies this article, including text appendices S1--S6 and figures S1--S13.
 The computer code to reproduce the simulation data and figures in this paper can be found online at \url{https://github.com/ovchinnv/affinity-maturation-paper2021.git}
 
 \bibliographystyle{frontiersinHLTH&FPHY}
