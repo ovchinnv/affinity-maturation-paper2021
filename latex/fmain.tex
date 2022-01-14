@@ -42,6 +42,7 @@
 %\newcommand{\mk}[1]{\textbf{[MK:#1]}}
 %\newcommand{\vo}[1]{\textit{#1}}
 %\newcommand{\comment}[1]{\textit{[#1]}}
+\newcommand{\cred}[1]{\textsf{\color{red}#1}}
 \newcommand{\mk}[1]{} % nothing
 \newcommand{\vo}[1]{#1} % text as is
 \newcommand{\comment}[1]{} % nothing
@@ -243,8 +244,13 @@ BnAbs have been isolated from animal and human subjects in response
 to natural infection or vaccination,\cite{corti17} and some have been engineered\cite{kallewaard16}
 to have very high breadth, providing simultaneous protection
 against phylogenetically distant group I and II HAs.\cite{corti11,li12,kallewaard16}
+%
+\cred{We note, however, that strong sequence or structural conservation of epitopes
+shared by different antigens is not an absolute requirement for targeting
+by bnAbs, as many polyreactive and self-reactive bnAbs have been
+discovered that are able to bind divergent ligands through structural flexibility.\cite{prigent18,ovchinnikov18}}
 
-Unfortunately, such bnAbs tend to be rare and are not well boosted in
+Unfortunately, bnAbs tend to be rare and are not well boosted in
 infections\cite{li12,ellebedy14,tan19,arevalo20}.
 Further, most of them have lower neutralization potency, compared to strain-specific Abs.
 However, bnAbs have
@@ -265,9 +271,10 @@ they usually are not the primary targets of immune responses.
 Since durable vaccine responses against highly-mutable pathogens will need
 to overcome immunodominance, \ie~to focus on conserved subdominant epitopes,
 various possible causes for subdominance have been considered. They include
-(i) epitope autoreactivity,\cite{bajic19a} (ii) low frequency of precursor
-antibodies able to bind the epitopes in question,\cite{andrews15} (iii)
-epitope shielding by glycans,\cite{bajic19} (iv) preexisting immune
+(i) epitope autoreactivity,\cite{bajic19a} (ii) low frequency of \cred{germline} precursor
+antibodies able to bind the epitopes in question,\cite{andrews15}
+\cred{also described as ``holes'' in the human antibody repertoire, which HIV exploits to protect its conserved regions\cite{xiao09},}
+(iii) epitope shielding by glycans,\cite{bajic19} (iv) preexisting immune
 memory,\cite{andrews15,arevalo20} poor steric accessibility of
 epitopes\cite{amitai20}, (v) inability to recruit sufficient T-cell help
 in germinal centers (GCs) due to a lack of compatible MHCII (major histocompatibility complex of type 2) epitopes,\cite{tan19}
@@ -282,6 +289,16 @@ to be a particularly important factor.
 virus particles with an affinity that was an order of magnitude lower than that for
 recombinant HA, which was interpreted in terms of reduced accessibility of
 stem epitopes of whole virions.
+%
+\cred{\citet{harris13} used cryo-electron tomography (cryo-ET) to estimate the 
+average spacing between HA spikes on influenza virions at 14nm, which
+appears to be compatible with bivalent binding of antibodies to the HA
+stem, based on the docking of an unrelated mouse IgG antibody.\cite{harris13}
+However, although the study demonstrated that stem epitopes are
+accessible to antibodies, because of rotational averaging, only one Fab
+of a stem antibody could be placed based on the cryo-ET data; the authors suggested 
+that steric constraints may lower binding stoichiometry.}
+%
 \citet{amitai20} used molecular simulations to map the accessibility
 of HA epitopes to antibody binding on model virus-like particles (VLPs),
 and predicted that the rate of bivalent (avid) antibody binding to stem
@@ -296,6 +313,10 @@ arrangement of the antigens, and not in composition or proportion, the results i
 that mosaic display confers an advantage to cross-reactive Abs
 \via~bivalent binding\cite{kanekiyo19}. Similar results were obtained recently for the
 SARS-CoV2 RBD.\cite{cohen21}
+%
+\cred{The importance of multivalent antigen binding in affinity maturation was
+also shown in the discovery of vaccine-induced Fab-dimerized antibodies
+directed to HIV glycans.\cite{williams21}}
 
 Motivated by these studies, we employed a coarse-grained computer model
 of affinity maturation (AM) in GCs to investigate how avidity
@@ -393,9 +414,14 @@ population (which is discussed in \SI). The species (i)--(iv) are distributed in
 while the T-cell model uses two equilibrium affinities, those between TCRs
 and MHCIIs loaded or unloaded with peptides. The T-cell model is related
 to the T-cell expansion model of \citet{mayer19}.  We consider the model to be 
-optional for the simulations performed here, because qualitatively the
+optional for the simulations performed here, because \cred{qualitatively the
 same results were obtained by assuming that the amount of T-cell help is
-equal to BCR activation by binding to antigen.
+equal to BCR activation by binding to antigen.  However, the reason for the 
+similar results obtained here could be the simplicity of our model, as we did not consider
+multiple distinct T helper cell populations, which were shown to be important for bnAb elicitation in a recent computational study.\cite{erwin20}}
+%
+\cred{Thus, in the main text, we present simulation results obtained without an explicit T-cell model.
+However, several validation calculations performed with the model are described in \SI.}
 
 \hfig{
 \begin{figure*}
@@ -502,6 +528,10 @@ competition between different lineages. As described in \sec{occlusion} we
 model this competition using an \textit{occlusion} parameter $\occl$, with $\occl=0$
 for the fully noninteracting case, presented above, and $\occl=1$ for the fully interacting
 (competing) case.
+%
+\cred{We note that a similar approach to model clonal competition was used by
+\citet{Yan20}, who introduced interaction parameters to represent Ag
+binding interference from Abs produced by earlier generations of B-cells.}
 
 We describe the results of the fully interacting case ($\occl$=1) next; however, 
 we note that a more realistic description of the overall GC reaction would probably
@@ -555,6 +585,12 @@ monovalent antibodies a survival advantage. A physiological
 rationale of setting a higher initial affinity of monovalent Abs could
 be that a significant proportion of monovalent (\eg, anti-HA stem) MBCs are recruted into secondary
 GCs, where the higher initial affinity allows the MBC-derived blasts to compete more effectively with na\"ive bivalent B-cells.
+%
+\cred{A recent study comparing the early plasmablast (PB) response with GC
+B cells obtained by fine-needle aspiration from vaccinated human subjects, found a variable, and sometimes large, clonal overlap
+(12\% - 88\%) between B cells in the PB pool and those in the GC, suggesting that substantial 
+recruitment of MBCs into GCs is possible.\cite{turner20}}
+%
 To model this scenario, we shifted the initial affinity distribution of the
 monovalent Abs
 %, which corresponds, as before, to lineage BCR\#1, 
@@ -769,6 +805,14 @@ For vaccine design, the precise Ag concentrations may need to be
 optimized to achieve a compromise between MBC population
 size and affinity for antigen.
 
+\cred{
+We caution, however, that the above results should be considered qualitative,
+because our model does not incorporate a saturating Ag concentration, which could be done 
+in fugure versions, \eg, by explicitly modeling immune complexes or FDCs.
+Thus, the strong dependence of B-cell response on the Ag concentration
+is most likely relevant in a scenario where the total antigen amount is low.
+}
+
 Finally, to investigate whether the outcome of multiple vaccinations can
 be optimized by manipulating the epitope concentrations corresponding
 to monovalent BCRs, we simulated six consecutive immunizations under the
@@ -808,6 +852,15 @@ MBC\#1 affinity decreases if Ag\#1 used in that immunization is increased
 essentially disappear after the final exposure, hence the present model suggests that there
 may not be a significant long term immunological effect of simply
 manipulating antigen concentration in a vaccine.
+
+\cred{We also note that, in the idealized case of a uniform antigen concentration
+profile, the normalized BCR affinities for antigen rise uniformly to a
+plateau around the 5th exposure (Fig.~S8). However, the results show a
+sensitivity to the antigen concentration profile, suggesting that the
+number of exposures needed to elicit high-affinity antibodies generally
+depends on the details of the exposure, such as epitope concentration, or
+whether the exposure is by vaccination or natural infection.}
+
 \section{Discussion}
 \label{sec:discussion}
 Rapidly mutating and proliferating viruses such as influenza, HIV, and,
@@ -893,35 +946,116 @@ cognate to the monovalent Ab was never increased (\fig{agtime}).
 These results suggest
 that increasing Ag concentration might only provide a temporary advantage
 to the cognate BCRs, as Ag levels are easy to manipulate in
-vaccination, but not in infection. Nevertheless, the strategy could prove
+vaccination, but not in infection. \cred{Nevertheless, the strategy could prove
 useful to expand the number of initial low-affinity B-cell lineages
 targeting rare epitopes against which high-quality B-cell precursors are
-rare, such as group I and II influenza stem epitopes. If subsequent
+rare, such as group I and II influenza stem epitopes, as also suggested 
+in a recent computational study of COVID vaccine efficacy.\cite{garg21}}
+
+If subsequent
 exposures \via~natural infection restore immunosubdominance,\cite{ellebedy14} regular
 vaccine boosting with higher concentrations of subdominant epitopes could be
 required.
 
-We note that multi-antigen vaccination cocktails have been
-designed,\cite{kanekiyo19,cohen21,glanville20} in which the
-epitopes that are conserved between the antigens are at effectively
-higher concentration than variable epitopes. Simulations
-performed here suggest that such cocktails have promise to elicit Abs to
-conserved epitopes \via~a concentration advantage.  Future experiments are
-needed to address
-whether the resulting immunity would persist after multiple rounds of
-natural infections.
 
-The model used here uses simple assumptions to show that
-immunosubdominance can be explained to a large degree by differences in
-the antibody binding valency. However, other factors, such as low
-natural germline precursor frequency, repertoire filtering due to
-self-reactivity, or reduced T-cell help, are likely to contribute. These
-factors could be incorporated into the model in an approximate way in
-future studies.
-More sophisticated approaches that explicitly model BCR evolution in
-sequence space and/or compute BCR/Ag binding affinity using atomic
-models\cite{conti21,sprenger21}, are likely to be required to design actual
-vaccine antigens and their cocktails.
+\cred{We note that multi-antigen vaccination cocktails have been designed, in
+which the epitopes that are conserved between the antigens are at
+effectively higher concentration than variable
+epitopes.\cite{kanekiyo19,cohen21,glanville20} In particular, mosaic
+nanoparticles appear to elicit a broader antibody response in animal
+experiments, compared to cocktail immunizations.\cite{kanekiyo19,cohen21}
+However, it remains to be shown whether such vaccines will lead to
+improved protection against highly mutable pathogens in the clinic.}
+%
+Simulations performed here suggest that such cocktails have promise to
+elicit Abs to conserved epitopes \via~a concentration advantage.  Future
+experiments are needed to address whether the resulting immunity would
+persist after multiple rounds of natural infections.
+
+The model used here relies on simple assumptions to show that for different
+epitopes with similar accessibilities, which can be interpreted as
+similar effective concentrations, immunosubdominance can be explained by
+differences in the antibody binding valency. This scenario appears
+applicable to the case of  natural immunity against influenza
+hemagglutinins, as \citet{harris13} have shown that most of the trimeric
+HA spikes are able to bind an anti-stem antibody. The arrangement of the
+spikes makes it likely that bivalent binding would be disfavored by energetic
+strain.\cite{harris13,amitai20} A related scanario applies in the
+case of HIV, in which low spike density makes bivalent binding unlikely,
+but antibodies engineered with long linkers  that could bind the same
+trimeric spike bivalently exhibited $>100$-fold greated potency.\cite{galimidi15}
+%
+\cred{
+However, binding valency alone cannot adequately explain immunodominance 
+that arises in vaccination using soluble HA ectodomains, because
+head and stem epitopes would be expected to have similar antibody accessibilities.
+Therefore, other factors, such as antigen plasticity, low natural germline
+precursor frequency, repertoire filtering due to self-reactivity, or
+reduced T-cell help,\cite{erwin20} must also contribute.
+}
+%
+\cred{For example, \citet{keating20} employed several methods of partially inhibiting GC
+formation in mice, and showed that the proportion of bnAbs in GC-inhibited
+mice was not increased relative to wild-type mice or untreated mice. The
+findings were used to argue that the predominant reason for low bnAb
+prevalence was not competition between antibody lineages, but other
+factors, such as removal of bnAb precursors due to immune tolerance
+mechanisms.\cite{keating20} Such factors could also explain
+why antibodies produced in natural infections such as SARS-Cov-2 tend to target relatively
+few antigenic epitopes, despite high overall antigen accessibility.\cite{barnes20}}
+
+Some of the aforementioned factors could be incorporated into the model
+in an approximate way in future studies.
+%
+\cred{The effects of adjuvants on B-cell activation can be modeled by
+parametrizing the B-cell activation function to include
+adjuvant concentration, or by incorporating the latter into a T helper cell model.
+Similar ideas could be used to include the effects of soluble signaling
+species, such as interleukins or Calcium ions.}
+%
+\cred{Further, more sophisticated approaches that explicitly model BCR evolution in
+sequence space and/or compute BCR/Ag binding affinity using structural models have been developed.
+For example, \citet{robert21}
+approximated B-cell and Antigen interactions by discretizing the epitope
+and paratope on a lattice, and using an empirical inter-residue
+potential.\cite{robert21} The authors were able to capture key properties 
+of multi-antigen vaccinations, such as increased cross-reactivity in
+cocktail immunizations.}
+%
+\cred{
+However, BCR/Ag models at all-atom resolution,\cite{conti21,sprenger21}
+which may be parametrized to account for antigen stability and rigidity,
+may ultimately be required to design actual vaccine antigens and their
+cocktails.
+}
+
+\cred{For the practical purpose of universal vaccine
+design, we can summarize the interpretation of our simulation results as
+follows.  HA stem epitopes presented on influenza virions are
+immuno-subdominant due to an inability to recruit bivalently-binding
+BCRs, combined other causes of subdominance. Even if vaccination with
+soluble antigen ectodomains elicited an anti-stem response, it would not
+be boosted in secondary GCs formed upon subsequent natural reinfection, 
+because the corresponding B-cells would be unable to bind antigen
+bivalently. It remains to be shown whether this disadvantage could be
+overcome by devising vaccines that present stem epitopes for bivalent
+binding, \eg~by using engineered immunogens attached to
+nanoparticles,\cite{corbett19} possibly in a mosaic
+arrangement\cite{cohen21}, or by immunizing with cocktails with very
+similar stems but diverse heads\cite{glanville20}.}
+
+\cred{While
+immunization with diverse coronavirus receptor binding domains presented
+as mosaic nanoparticles elicited a broad antibody response, including to
+strains not present in the vaccine,\cite{cohen21} when this strategy was
+applied to a diverse panel of influenza HA spikes, the resulting breadth
+was no greater than that observed with immunizations using homotypic
+nanoparticle cocktails.\cite{cohen21a} The interpretation was that the
+epitopes in the mosaic panel were too dissimilar to allow significant
+bivalent binding, which suggests that careful tuning of antigen sequence
+similarity may be needed to elicit broad responses \via a concentration
+advantage.}
+
 \section{Methods}
 \label{sec:methods}
 
@@ -969,8 +1103,7 @@ can be represented by a discrete set of values, as follows. We assign to each $B
 affinities in logarithmic space with energy grid spacing $\Delta E$, or exponential
 discretization in affinity space.
 
-As done in
-Ref.~\citenum{kepler93}, we will refer to the energy bins $j$ as
+As done by \citet{kepler93}, we will refer to the energy bins $j$ as
 \textit{affinity classes}. Their number, $N_\epsilon$, is related to $\Delta E$ by $\log K^{max}_{eq} - \log K^{min}_{eq} =
 (N_\epsilon-1)\Delta E$. We take
 $N_\epsilon$=20 (see \tab{param}), which implicitly determines $\Delta E$
@@ -1072,7 +1205,7 @@ we defined the activation function as
 \end{equation}
 and performed least squares optimization to improve agreement with the average GC data\cite{wittenbrink11}, to obtain
 $\rho$=0.94 and $\epsilon$=0.7 (see \SI~S4 \& Fig.~S9).
-Because $\theta^i_j<1$, the prefactor reduces the activation upper bound to $\rho$; the exponent $\epsilon$<1 increases
+Because $\theta^i_j<1$, the prefactor reduces the activation upper bound to $\rho$; the exponent $\epsilon<1$ increases
 activation for smaller binding fraction values, reducing the competitive advantage of higher affinity BCRs.
 
 Two comments on \eq{am} are necessary. First, the proliferation is split
@@ -1379,6 +1512,16 @@ or
  \label{eq:ag7}
 \end{equation}
 \eq{occ} satisfies this condition, since we also assume that $[a_2]$ is nonnegative.
+
+\cred{We note that the occlusion tensor is similar in spirit to the interaction
+matrix used by \citet{Yan20}. However, as these authors had a different
+purpose, specifically, to model synergistic \vs~antagonistic effects of
+Abs derived from previous B cell lineages on B cells in the current
+generation, they allowed negative interference values, which are not
+physically justifiable in our model, as they would imply creation of Ag.}
+
+
+
 
 \subsubsection{Integration of model equations}
 \label{sec:integration}
