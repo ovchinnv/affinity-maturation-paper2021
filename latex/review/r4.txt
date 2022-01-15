@@ -1,0 +1,172 @@
+EVALUATION
+Please summarize the hypothesis, findings and viewpoint reported.
+
+The authors of the manuscript entitled “A coarse-grained model of
+affinity maturation indicates the importance of B-cell receptor avidity
+in epitope subdominance” build on the mathematical models provided by
+Kepler and Perelson (1993), Oprea and Perelson (1997) and incorporate
+binding mode (monovalent vs bivalent, noncooperative vs cooperative) of
+recognition on GC size, memory and Plasmablast sizes and affinities of B
+cell receptor (BCR) lineages that target immuodominant (ID) vs
+subdominant epitopes (SD). In addition to binding avidity, they include
+an epitope occlusion parameter (o) as a part of their model accounting
+for the presence of competing BCR lineages targeting the ID and SD
+epitopes. They also examine if a protocol with multiple (6) immunizations
+involving increasing, decreasing, constant and sporadic high
+concentrations of epitopes leads to overcoming the sub dominance effect
+of epitopes. The model suggests only temporary shifts with no long-term
+overcoming of subdominance effects. The authors explain the re-emergence
+of epitope sub dominance affects (low affinity, small size of MBC, PC and
+GC) when continuously boosted with same pandemic antigen is primarily due
+to monovalent recognition of subdominant epitopes. They suggest this
+effect can potentially be overcome by utilizing a mixture of drifted
+variant HAs that increase the effective concentration of SD stem epitope,
+however overall affinity enhancement is predicted to be compromised owing
+to increased concentration of SD epitope that explains the lower potency
+of antibodies targeting the stem of HA.
+
+Please highlight the limitations and strengths.
+
+The manuscript is in general well written, with assumptions about model
+generation, as well results from the model justified and explained
+clearly. However, since only a few potential determinant of
+immunogenicity are considered, it is unclear how useful the results will
+be for the actual design of immunogens to elicit antibodies against
+conserved but sub-dominant epitopes.
+
+Please comment on the reported results and data interpretation. 
+
+1. Given the geometric constraints on HA on virions, with low stem
+exposure, it is certainly likely that BCRs cannot bind stems bivalently.
+However, this constraint does not apply to stem epitopes displayed on
+either soluble ectodomains or stabilized stem immunogens (see for example
+PMIDs 20615991, 26303961). In addition, even on a given antigen, certain
+epitopes are highly immunodominant over other well exposed sites. For
+example in the case of the SARS-CoV-2 spike the Receptor Binding Motif
+(RBM) on the Receptor Binding Domain is highly immunodominant even though
+there is a considerable amount of exposed surface outside of the RBM. A
+similar situation prevails on the influenza HA head where there are a few
+immunodominant sites.
+
+AUTHOR REPLY: We agree with the reviewer's points, and have incorporated them
+in a modified discussion (lines , as follows:
+
+MANUSCRIPT CHANGES: However, binding valency alone cannot adequately
+explain immunodominance  that arises in vaccination using soluble HA
+ectodomains, because head and stem epitopes would be expected to have
+similar antibody accessibilities. Therefore, other factors, such as
+antigen plasticity, low natural germline precursor frequency, repertoire
+filtering due to self-reactivity, or reduced T-cell help [Erwin20], must
+also contribute. For example, Keating et al. 2020 employed several
+methods of partially inhibiting GC formation in mice, and showed that the proportion of
+bnAbs in GC-inhibited mice was not increased relative to wild-type mice
+or untreated mice. The findings were used to argue that the predominant
+reason for low bnAb prevalence was not competition between antibody
+lineages, but other factors, such as removal of bnAb precursors due to
+immune tolerance mechanisms [Keating20]. Such factors could also explain
+why antibodies produced in natural infections such as SARS-Cov-2 tend to target relatively
+few antigenic epitopes, despite high overall antigen accessibility [Barnes20].\cite{barnes20}
+
+
+2. The major conclusion of the manuscript is that bivalent and
+cooperative binding are the primary factors that determine
+immunogenicity. However, one would assume that epitope accessibility is
+more important than bivalent binding, as unless an epitope is available
+for at least monovalent binding, it is unlikely to be immunogenic.
+Bivalency is then a higher order effect which might be responsible for
+differences in antigenicity between equally accessible epitopes.
+Similarly antigen stability must also be an important determinant.
+Rapidly degraded or aggregation prone antigen is unlikely to be
+immunogenic.
+
+AUTHOR REPLY: We generally agree with the reviewer's point, and we
+incorporated this comment into the last paragraph of the discussion
+section. We do believe valency differences specifically between anti-head
+and anti-stem antibodies of HA are important, as cryo-electron tomography
+data of Harris et al. (2013) suggests that the majority of HA stems on
+virions are accessible to monovalent binding by antibody C179 (at least
+in the absence of anti-head Abs).
+
+MANUSCRIPT CHANGES: The model used here relies on simple assumptions to
+show that for diffent epitopes with similar accessibilities, which can be
+interpreted as similar effective concentrations, immunosubdominance can
+be explained by differences in the antibody binding valency. This
+scenario appears applicable to the case of  natural immunity against
+influenza hemagglutinins, as Harris et al. 2013 have shown that most of
+the trimeric HA spikes are able to bind an anti-stem antibody. The
+arrangement of the spikes makes it likely that bivalent binding would be
+disfavored by energetic strain.[harris13,amitai20] A related scanario
+applies in the case of HIV, in which low spike density makes bivalent
+binding unlikely, but antibodies engineered with long linkers  that could
+bind the same trimeric spike bivalently exhibited >100-fold greater
+potency [Galimidi15]. 
+
+
+3. One of the limitations of the present study is that it is hard to
+translate some of the simulation results into testable experiments. For
+example, a large increase in immunogenicity is seen with a twofold
+increase in antigen amount (Fig 7 vs Fig 4). Wouldn’t this depend on the
+absolute amounts involved as well as antigen stability, rigidity etc?
+
+AUTHOR REPLY: The reviewer is correct.  With respect to stability and
+rigidity,  we did not consider either peoperty in our study, in part
+because the binding affinity model does not have a structural component. 
+We now mention this in the discussion (see below). With respect to the
+total amount of antigen, our model is qualitative because it does not
+incorporate a saturating antigen concentration, either directly, or by
+modeling immune complexes or FDCs, although this can be changed in future
+versions.  Thus, at present, the results could apply to a scenario where
+the antigen amount is low, such that doubling the antigen amount could 
+translate into large differences in B-cell activation.
+
+MANUSCRIPT CHANGES:
+line <new location? :
+
+However, BCR/Ag models at all-atom resolution [Conti21,Sprenger21],
+which may be parametrized to account for antigen stability and rigidity,
+may ultimately be required to design actual vaccine antigens and their
+cocktails.
+
+line 300: We caution, however, that this result should be considered qualitative,
+because our model does not incorporate a saturating Ag concentration, which could be done 
+in fugure versions, \eg, by explicitly modeling immune complexes or FDCs.
+Thus, the strong dependence of B-cell response on the Ag concentration
+is most likely relevant in a scenario where the total antigen amount is low.
+
+4. A major determinant of immunogenicity is the adjuvant. It would be
+useful if the authors could mention in the Discussion whether/how they
+think such effects can be incorporated into their model
+
+AUTHOR REPLY: We now mention incorporating adjuvant in the discussion section (line 380) :
+
+MANUSCRIPT CHANGES: The effects of adjuvants on B-cell activation can be modeled by
+parametrizing the B-cell activation function h (see Methods) to include
+adjuvant concentration, or by incorporating the latter into a T helper cell model.
+Similar ideas could be used to include the effects of soluble signaling
+species, such as interleukins or Calcium ions.
+
+5. In Figure 1 which subtypes of influenza A were examined and over how many years?
+
+AUTHOR REPLY:  We have modified the manuscript to include this
+clarification. The caption of Fig. 1 now includes:
+
+MANUSCRIPT CHANGES: Sequences of avian, swine and human influenza type A 
+spike proteins spanning the years 1918--2019 and subtypes 1-18 were
+downloaded from the NIH influenza research database
+
+6. Lines 73-74. The actual benefits conferred by mosaic antigens vs
+cocktails are debatable, in most cases differences are quite small, both
+for influenza and SARS-CoV-2. 
+
+AUTHOR REPLY: We have modified penultimate paragraph in the discussion
+section (lines 371--375) to incorporate the reviewer's comment, as follows
+
+MANUSCRIPT CHANGES: We note that multi-antigen vaccination cocktails have
+been designed, in which the epitopes that are conserved between the
+antigens are at effectively higher concentration than variable epitopes
+[kanekiyo2019,cohen2021,glanville2020]. In particular, mosaic
+nanoparticles appear to elicit a broader antibody response in animal
+experiments, compared to cocktail immunizations [kanekiyo2019,cohen2021].
+However, it remains to be shown whether such vaccines will lead to
+improved protection against highly mutable pathogens in the clinic.
+

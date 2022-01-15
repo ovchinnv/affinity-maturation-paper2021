@@ -1,0 +1,263 @@
+Reviewer 3
+EVALUATION
+Please summarize the hypothesis, findings and viewpoint reported.
+
+In this manuscript, Ovchinnikov and Karplus propose an ODE-based model of
+the germinal center reaction. They investigate the long lasting question
+of the emergence of broadly neutralizing antibodies (bnAbs), in
+particular to influenza vaccine. They investigate whether the capacity of
+BCR/antibodies to bind two copies of the target antigen (bivalently)
+could provide sufficient selective advantage to antibodies that bind the
+stem of the influenza hemagglutinin (HA), in comparison to antibodies
+binding immunodominant/variable epitopes, that have lower potential to
+become broadly neutralizing. The HA stem is of particular interest since
+it is mainly conserved between the flu variants and shows potential to
+induce bnAbs. The mathematical model is well-designed, and faithfully
+follows the main biological mechanisms behind the germinal center
+response, which is very well appreciated. The existing ODE models in the
+field are usually lacking such biological understanding (for instance a
+physiological Tfh selection mechanism), and therefore, this model is an
+interesting development to the community. The authors have provided the
+code for their model, and validated its behavior with experimental data
+reflecting the ‘classical’ germinal center reaction. They compare the
+fate of BCR/antibodies recognizing the conserved HA stem in GCs with or
+without competition with BCR/antibodies targetting the easier,
+immunodominant epitopes, and compare three possibility/hypotheses of
+bivalent binding: the BCRs bind monovalently, bivalently, or bivalently
+with increased chance to bind with the second arm (cooperation). They
+show that with a realistic strength of bivalent cooperation, a low
+affinity stem-recognizing can indeed compete with high affinity
+immunodominant-recognizing antibodies. It means that vaccine antigens
+(like mosaic or nanoparticles), that display patterned antigens, could
+indeed support the induction of stem-recognizing bnAbs, provided the
+selective advantage is true only for the stem-recognizing BCRs, but not
+the immunodominant-recognizing ones. The authors finally study different
+effects of occlusion between antibodies targeting the same or different
+epitopes, and propose an explanation why repeated vaccination increases
+the chances of bnAb induction. Overall, the study is very well explained
+for both biologists and modellers, and I will be happy to support
+publication.
+
+
+Please highlight the limitations and strengths.
+see above for strengths
+
+Limitations: [S]ome points would need to be solved though:
+
+Major:
+
+The authors focus on bnAbs targetting the stem of HA (conserved
+recognition), but repeatedly write in many places that bnAbs are the ones
+recognizing the stem (one example is line 57), which is misleading. There
+also exist potent bnAbs that recognize regions outside the stem, that can
+be mutated between strains (this is not conserved recognition anymore,
+but rather promiscuous cross-reactivity). It doesn’t weaken the present
+manuscript to explain that other types of bnAbs are possible, and one
+type is investigated here.
+
+AUTHOR REPLY: We actually state in the introduction (line 34) that there
+are bnAbs recognizing a epitopes at the interface between the HA heads in
+the trimer (refs 9 & 10), and in the HA head itself, near the sialic acid
+receptor (refs 11 & 12).  However, we agree with the reviewer's point
+that the requirement for conservation can be offset by
+promiscuity/flexibility, and thus we have modified the introduction
+section to address this as follows:
+
+MANUSCRIPT CHANGES (line 45) : We note, however, that strong sequence or
+structural conservation of epitopes shared by different antigens is not
+an absolute requirement for targeting by bnAbs, as many polyreactive and
+self-reactive bnAbs have been discovered that are able to bind divergent
+ligands through structural flexibility [Prigent2018,Ovchinnikov2018].
+
+
+The recent literature in GC simulation and bnAbs has been ignored.
+Although this work is new, main references should be at least mentioned,
+if not compared (especially as they propose alternative hypotheses). This
+includes: 
+
+PMID: 33083735 (Yan & Wang 2020) where cooperative/competitive binding was
+modelled in the context of bnAb induction; 
+
+AUTHOR REPLY: We now reference this publication in two places in the manuscript:
+
+MANUSCRIPT CHANGES (Results line 163):
+We note that a similar approach to model clonal competition was used by
+Yang & Wang 2020, who introduced interaction parameters to represent Ag
+binding interference from Abs produced by earlier generations of B-cells.
+
+MANUSCRIPT CHANGES (Methods line 606):
+We note that the occlusion tensor is similar in spirit to the interaction
+matrix used by Yan & Wang 2020. However, as these authors had a different
+purpose, specifically, to model synergistic vs. antagonistic effects of
+Abs derived from previous B cell lineages on B cells in the current
+generation, they allowed negative interference values, which are not
+physically justifiable in our model, as they would imply creation of Ag.
+
+PMID: 34485861 where different
+strategies of combining similar antigens and repeating immunizations was
+simulated, suggesting that cross-reactive sequences can already be
+amplified by cocktail or/and repeated immunizations as well, 
+
+AUTHOR REPLY: We now refer to this publication in the discussion section:
+MANUSCRIPT CHANGES (line 382):
+
+Further, more sophisticated approaches that explicitly model BCR evolution in
+sequence space and/or compute BCR/Ag binding affinity using structural models have been developed.
+For example, Robert et al (2021)
+approximated B-cell and Antigen interactions by discretizing the epitope
+and paratope on a lattice, and using an empirical inter-residue
+potential. The authors were able to capture key properties 
+of multi-antigen vaccinations, such as increased cross-reactivity in
+cocktail immunizations.
+
+
+PMID:34917089 where the authors propose that adjusting antigen dose can
+improve the survive of bnAb precursors; 
+
+AUTHOR REPLY: We now refer to this publication in the discussion section:
+MANUSCRIPT CHANGES (line 370):
+
+[T]he strategy could prove useful to expand the number of initial
+low-affinity B-cell lineages targeting rare epitopes against which
+high-quality B-cell precursors are rare, such as group I and II influenza
+stem epitopes, as also suggested  in a recent computational study of
+COVID vaccine efficacy [Garg21].
+
+PMID: 32127549, where the authors propose an ODE model for competing
+lineages in GCs in the light of bnAb induction.
+
+AUTHOR REPLY: We now cite this study in the context of our modeling summary in Results
+MANUSCRIPT CHANGES (line 126):
+
+[Q]ualitatively the same results were obtained by assuming that the
+amount of T-cell help is equal to BCR activation by binding to antigen. 
+However, the reason for the  similar results obtained here could be the
+simplicity of our model, as we did not consider multiple distinct T
+helper cell populations, which were shown to be important for bnAb
+elicitation in a recent computational study [Erwin20].
+
+Can the authors discuss a bit more why only the stem-recognizing
+BCR/antibodies would get selective advantage, and not the ones
+recognizing immunodominant regions? Does it suggest a careful design of
+antigen nanoparticles, such that only the stem is spaced at distances
+that allow bivalent binding? Or that neighbor antigens should have the
+same stem but very different variable regions in a mosaic format, this
+could be interesting for antigen design.
+
+AUTHOR REPLY:  We investigated two possible factors that could give
+stem-targeting Abs a selective advantage, both of which rely on greater
+sequence conservation in the stem: (1) A fraction of existing memory
+B-cells (MBCs), with significant affinity for the stem are recruited into
+GCs upon infection with influenza; thus stem-specific GC B cells start
+marturing at a higher affinity ; in contrast, high-affinity MBC tageting
+the head are less likely to be recruited into GCs because the head is too
+variable; (2) HA stem epitopes are given as a vaccine at a higher
+concentration than the head epitopes, which gives the anti-stem B cells
+an activation advantage by lowering the selective pressure. This can be
+done either via cocktail design, or by engineering the antigens to remove
+or mask the HA head. Both of the vaccine strategies that the reviewer
+mentions are expected to be advantageous. We expanded the discussion
+section to reflect the reviewer's comment.
+
+MANUSCRIPT CHANGES (line 382) : For the practical purpose of universal vaccine
+design, we can summarize the interpretation of our simulation results as
+follows.  HA stem epitopes presented on influenza virions are
+immuno-subdominant due to an inability to recruit bivalently-binding
+BCRs, combined other causes of subdominance. Even if vaccination with
+soluble antigen ectodomains elicited an anti-stem response, it would not
+be boosted in secondary GCs formed upon subsequent natural reinfection, 
+because the corresponding B-cells would be unable to bind antigen
+bivalently. It remains to be shown whether this disadvantage could be
+overcome by devising vaccines that present stem epitopes for bivalent
+binding, \eg~by using engineered immunogens presented on nanoparticles,\cite{corbett19}
+possibly in a mosaic format\cite{cohen21}, or by immunizing with cocktails with very
+similar stems but diverse heads\cite{glanville20}.
+
+
+Minor:
+
+In figure 1, the authors show a virus particle with bivalent binding. Do
+we actually know if the spikes are spaced enough to allow for bivalent
+binding?
+
+AUTHOR REPLY: The average spacing between hemagglutinin spikes on virion
+surfaces is estimated from cryo-ET studies to be 14nm, which appears to
+permit bivalent binding of antibodies to the HA stem (Harris et al 2013).
+However, although the study demonstrates that stem epitopes are
+accessible to antibodies, because of rotational averaging, only one Fab
+of the stem antibody could be placed with certainty; thus the valency of
+antibody binding to the stem is not known. We incorporated this point
+into the intriduction (line 65)
+
+MANUSCRIPT CHANGES:
+Harris et al. (2013) used cryo-electron tomography (cryo-ET) to estimate the 
+average spacing between HA spikes on influenza virions at 14nm, which
+appears to be compatible with bivalent binding of antibodies to the HA
+stem, based on the docking of an unrelated mouse IgG antibody.
+However, although the study demonstrated that stem epitopes are
+accessible to antibodies, because of rotational averaging, only one Fab
+of a stem antibody could be placed based on the cryo-ET data; the authors suggested 
+that steric constraints may lower binding stoichiometry.
+
+
+The authors could also add a nanoparticle vaccine antigen as a
+teasing for an additional condition where their work applies. 
+
+AUTHOR REPLY: Because such additional subfigure with a nanoparticle would
+be substantially similar to the one labeled with "Virus", we did not add one.
+However, we modified the label in Fig. 2B to read "Virus or nanoparticle"
+
+
+In most
+figures, it was not 100\% clear what the GC size means, is one curve
+meaning one GC originating from only one sequence that mutates, or are
+all GC simulations including competing random sequences? This would need
+to be clarified. Including a grey or shaded curve showing the total GC
+size could also help. 
+
+AUTHOR REPLY:
+Each curve corresponds to a single clonal lineage. To clarify this, we
+changed the figure labels to read "GC clone size". However, we did not
+add a curve representing the total B-cell count, because doing so would
+require increasing y-axis limits, which would make it more difficult to
+see the difference in  different clones at longer times.
+
+I actually didn’t understand if Tfh help was
+simulated at all. Maybe make more clear, it is not important for the
+simulations results, but important to have a model that can have
+physiological Tfh modulation in the future.
+
+AUTHOR REPLY: Yes, we did use T-cell help in some simulations.  However, 
+as we have now clarified in the new version of the manuscript (see
+below), our results did not differ qualitatively.  This maybe because of
+the simplicity of the T cell model (which used a single T helper cell type),
+and because we ultimately used the same experimental data to adjust the model 
+to match GC size in single-antigen simulations.
+The T-cell model and the related simulations are described in SI section 6.
+
+MANUSCRIPT CHANGES:
+[I]n the main text, we present simulation results obtained without an explicit T-cell model.
+However, several validation calculations performed with the model are described in SI APpendix.
+
+Also, I think the present results are really promising in the context of
+how to design vaccine antigens with specific distancing between good and
+bad epitopes, which could be discussed more extensively as to increase
+the interest to the reader.
+
+AUTHOR REPLY: We thank the reviewer for the suggestion, and agree with
+the general idea. However due to the coarse-grained nature of the model,
+it is difficult to say precisely how similar or dissimilar the epitopes
+of interest need to be to optimize for breadth and affinity. We modified
+the discussion to reflect the comment, as follows.
+
+MANUSCRIPT CHANGES (line 382) :
+While immunization with diverse coronavirus receptor binding domains
+presented as mosaic nanoparticles elicited a broad antibody response,
+including to strains not present in the vaccine [Cohen21], when this
+strategy was applied to a diverse panel of influenza HA spikes, the
+resulting breadth was no greater than that observed with immunizations
+using homotypic nanoparticle cocktails [Cohen21a]. The interpretation
+was that the epitopes in the mosaic panel were too dissimilar to allow
+significant bivalent binding, which suggests that careful tuning of
+antigen sequence similarity may be needed to elicit broad responses via
+a concentration advantage.

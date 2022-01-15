@@ -1,0 +1,186 @@
+Independent Review Report, Reviewer 2
+EVALUATION
+Please summarize the hypothesis, findings and viewpoint reported.
+
+The development of universal influenza vaccine remains a major challenge
+not only due to the rapidly evolving mutations in the virus but also
+their ability to misguide the host immune response towards the variable
+epitopes while protecting the achilles' heel found in the conserved stem
+region from the immune attack. In their theoretical hypothesis
+manuscript, Ovchinnikov and Karplus presented a coarse-grained
+computational and showed how B-cell receptor binding valency (avidity)
+affects the growth and affinity maturation of competing B-cells in
+germinal center reaction. These results supported the notion of effective
+epitope concentration via design of custom immunogens or cocktail fashion
+to elicit bnAbs to target the subdominant epitopes of stem region. Please
+highlight the limitations and strengths. The limitation is obviously that
+its a coarse-grained model. Still, it is a first in kind of attempt with
+improved parameters to build a computational model to address a key
+question for the universal flu vaccine. 
+
+Please comment on the reported
+
+Please see Q5. I checked the suppl. figures and tables that are working.
+I suggested to add a few references. 
+
+The development of universal influenza vaccine remains a major challenge
+not only due to the rapidly evolving mutations in the virus but also
+their ability to misguide the host immune response towards the variable
+epitopes while protecting the achilles' heel found in the conserved stem
+region from the immune attack. In their theoretical hypothesis
+manuscript, Ovchinnikov and Karplus presented a coarse-grained
+computational and showed how B-cell receptor binding valency (avidity)
+affects the growth and affinity maturation of competing B-cells in
+germinal center reaction. They surveyed all related literature and
+captured the experimental parameters and motivation required for building
+the computational model and addressing a topical issue of universal
+vaccine design for the influenza virus. They relied on the classical work
+of Perelson’ model of optimizing somatic hypermutation in B cells during
+affinity maturation. Among several factors possibly contributing to the
+challenges in vaccine design, the epitope subdominance appears to a
+critical factor which the authors have investigated here by using their
+models. The idea of immune holes as a possible mechanism which a virus
+like HIV-1 can use to evade immune response was first hypothesized and
+tested by Dimitrov group (PMID: 19748484) that needs to be cited at the
+context.
+
+ATHOR REPLY: We now mention and cite the Dimotrov et al study (ref #21) in the
+introduction, where low germline precursor frequency is discussed as a
+cause of subdominance (line 59)
+
+MANUSCRIPT CHANGES:
+germline precursor antibodies able to bind the epitopes in question(20),
+which is related to the idea of ``holes'' in the human BCR repertoire,
+exploited by HIV to protect its conserved regions [Xiao09]
+
+As antigen-antibody complexes is a very large system, authors’ choice of
+coarse-graining model and its ability to investigate comparing multiple
+competing epitope/paratope pairs in the context of B cell and antibody
+production and affinity for antigen were commendable. The authors may
+also benefit from the recent work of Chakraborty et al. (PMID: 33031741)
+by referring and commenting to their computational model of affinity
+maturation although they dealt with the HA. 
+
+AUTHOR REPLY:
+The present manuscript already refers to this publication (Amitai et al
+2020, old ref #21, new ref#22) in several places (e.g. introduction lines
+60, 68, where we also mention their major finding that the the rate of
+bivalent binding to the HA stem  is low compared to the HA head due to
+steric constraints).  No related modifications were made in the revision.
+
+Also, this one, PMID:
+32866963 to comment adding about GC engaging both naïve and memory B
+cells and implications. 
+
+
+AUTHOR REPLY: We now mention the citation (new ref #) in Results (line 196) :
+
+MANUSCRIPT CHANGES: A recent study comparing the early plasmablast (PB)
+response with GC B cells obtained by fine-needle aspiration, found a
+variable and sometimes large clonal overlap (12\% - 88\%) between B cells
+in the PB pool and those in the GC, suggesting that substantial 
+recruitment of MBCs into GCs is possible [Turner20].
+
+Adjuvants and Calcium signaling on the B cell
+activation are two major factors that may need to be mentioned too.
+
+AUTHOR REPLY: We now mention these factors at the end of the discussion section (line 380) :
+
+MANUSCRIPT CHANGES: The effects of adjuvants on B-cell activation can be modeled by
+parametrizing the B-cell activation function $h$ (see Methods) to include
+adjuvant concentration, or by incorporating the latter into a T helper cell model.
+Similar ideas could be used to include the effects of soluble signaling
+species, such as interleukins or Calcium ions.
+
+
+
+The main finding of this manuscript about the B cell receptors that are
+unable to bind antigen bivalently, or cooperatively have significantly
+slower rates of growth, memory B-cell production and rates of affinity
+maturation. Thus, those B-cells were predicted to be outcompeted by
+B-cells that bind bivalently and cooperatively. Though this notion is
+known and shown experimentally somewhere, this study used a first kind of
+computational model focusing on different aspects of B cells (GC, MBC,
+PC) and affinity maturation in comparing the growth rates of three
+noncompeting B-cell lineages, in different Ag geometries in BCR binding -
+monovalent, bivalent, and cooperative. These results supported the notion
+of effective epitope concentration via design of custom immunogens or
+cocktail fashion to elicit bnAbs to target the subdominant epitopes of
+stem region.
+
+As author simulated 6 consecutive immunizations, is it possible to
+predict the optimal number of immunizations for producing antibodies with
+high affinity to Ag in general (either HA or stem)?
+
+AUTHOR REPLY: Figure S8 in the supplement shows the evolution of
+normalized BCR affinity as a function of exposure to antigen. In the
+idealized case of a uniform antigen concentration profile, the affinity
+reaches a plateau around the 5th exposure (black dashes). However, the
+results display a strong sensitivity to antigen concentration (red and
+green dashes), suggesting that the number of exposures needed to elicit
+high affinithy antibodies depends on the details of the exposure, such as
+epitope concentration, whether the exposure is by vaccination or natural
+infection, etc.
+
+MANUSCRIPT CHANGES: line 315.
+We note that, in the idealized case of a uniform antigen concentration
+profile, the normalized BCR affinities for antigen rise uniformly to a
+plateau around the 5th exposure (Fig. S8). However, the results show a
+sensitivity to the antigen concentration profile, suggesting that the
+number of exposures needed to elicit high-affinity antibodies generally
+depends on the details of the exposure, such as epitope concentration, or
+whether the exposure is by vaccination or natural infection.
+
+Recently, Fab-dimerized glycan-reactive antibodies were discovered (PMID:
+34019795). It may be possible that such constrained Fab structures in
+BCRs may preferably bind to the conserved region of subdominant epitopes.
+
+AUTHOR REPLY: We now include the above reference in the introduction section.
+MANUSCRIPT CHANGES: (line 77)
+The importance of multivalent antigen binding in affinity maturation was
+also shown in the discovery of vaccine-induced Fab-dimerized antibodies
+directed to HIV glycans [Williams21].
+
+Similarly, antibodies with certain IgG subtype influence the binding to
+conserved HA regions is known (PMID: 31100267) but such antibodies
+targeting the stem is also possible and MD simulations of linkers could
+add value in finding that. 
+
+AUTHOR REPLY: The above study of an interfacial epitope (Watanabe et al.
+2019) is already mentioned in the  original manuscript (as ref #9) in the
+introduction (lines 38 and 65).  The IgG dependence suggests that the Ab
+might protect by ADCC, which is mentioned in the first paragraph on p. 3.
+Thus, no manuscript modifications were made in response to this comment.
+
+Finally, the authors can cite and briefly
+discuss on this one PMID: 33144374 as it implies the other way around
+(about the role GC and competition with high-affinity antibodies).
+
+AUTHOR REPLY: This study used several methods of inhibiting GC formation
+in mice to show that the proportion of bnAbs in GC-inhibited mice was not
+increased relative to wild-type mice or untreated mice, and thus to argue
+that the predominant reason for low bnAb prevalence was not competition,
+but other factors, such as immune tolerance. We now refer to it in the
+discussion section.
+
+MANUSCRIPT CHANGES: (line 376)
+For example, Keating et al. (2020) employed several methods of inhibiting GC
+formation in mice to show that the proportion of bnAbs in GC-inhibited
+mice was not increased relative to wild-type mice or untreated mice. The
+findings were used to argue that the predominant reason for low bnAb
+prevalence was not competition between antibody lineages, but other
+factors, such as removal of bnAb precursors due to immune tolerance
+mechanisms [Keating20].
+
+Minor suggestions:
+
+Figure 1 suggestion, the color gradient may be better if reversed (red for variable and blue for conserved)
+AUTHOR REPLY: We changed the color scheme as suggested.
+
+Ab, Abs, Ag – are they defined somewhere?
+AUTHOR REPLY:
+Abbreviations, including the above, are written out after their first use in the paper.
+
+Line 404, “As done in Ref. 27,” change to “As done in Kepler and Perelson (270)”
+AUTHOR REPLY: We made the change, as suggested.
+
