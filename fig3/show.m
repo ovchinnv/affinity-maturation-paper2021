@@ -34,7 +34,7 @@ ylim([0 5e3]);
 xlim([0 35]);
 text(-6,5200,'A','fontsize',17)
 %text(-6,5200,'D','fontsize',17)
-ylabel('\it GC size (cells)', 'fontsize', 14) ;
+ylabel('\it GC clone size (cells)', 'fontsize', 14) ;
 xlabel('\it t(days)', 'fontsize', 14) ;
 print(gcf, '-dpng', 'gcsize')
 print(gcf, '-depsc2', 'gcsize')

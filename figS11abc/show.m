@@ -29,7 +29,7 @@ for iag=1:nag
  end
 end
 
-ylabel('\it GC size (cells)', 'fontsize', 14) ;
+ylabel('\it GC clone size (cells)', 'fontsize', 14) ;
 xlabel('\it t(days)', 'fontsize', 14) ;
 xlim([0 max_t]);
 l=legend(leg, 'location', 'northeast'); legend boxoff ; set(l, 'fontsize', 12)
