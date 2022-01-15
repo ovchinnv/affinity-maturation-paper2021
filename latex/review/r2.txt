@@ -44,12 +44,12 @@ like HIV-1 can use to evade immune response was first hypothesized and
 tested by Dimitrov group (PMID: 19748484) that needs to be cited at the
 context.
 
-ATHOR REPLY: We now mention and cite the Dimotrov et al study (ref #21) in the
-introduction, where low germline precursor frequency is discussed as a
-cause of subdominance (line 59)
+ATHOR REPLY: We now mention and cite the Dimitrov et al study (ref #23)
+in the introduction, where low germline precursor frequency is discussed
+as a cause of subdominance (line 59)
 
-MANUSCRIPT CHANGES:
-germline precursor antibodies able to bind the epitopes in question(20),
+MANUSCRIPT CHANGES (line 61):
+germline precursor antibodies able to bind the epitopes in question,
 which is related to the idea of ``holes'' in the human BCR repertoire,
 exploited by HIV to protect its conserved regions [Xiao09]
 
@@ -63,31 +63,32 @@ maturation although they dealt with the HA.
 
 AUTHOR REPLY:
 The present manuscript already refers to this publication (Amitai et al
-2020, old ref #21, new ref#22) in several places (e.g. introduction lines
-60, 68, where we also mention their major finding that the the rate of
+2020, old ref #21, new ref#24) in several places (e.g. introduction lines
+64, 78, where we also mention their major finding that the the rate of
 bivalent binding to the HA stem  is low compared to the HA head due to
 steric constraints).  No related modifications were made in the revision.
 
 Also, this one, PMID:
-32866963 to comment adding about GC engaging both naïve and memory B
+32866963 to comment adding about GC engaging both naive and memory B
 cells and implications. 
 
 
-AUTHOR REPLY: We now mention the citation (new ref #) in Results (line 196) :
+AUTHOR REPLY: We now mention the citation (new ref #46) in Results (line 216) :
 
 MANUSCRIPT CHANGES: A recent study comparing the early plasmablast (PB)
 response with GC B cells obtained by fine-needle aspiration, found a
-variable and sometimes large clonal overlap (12\% - 88\%) between B cells
+variable and sometimes large clonal overlap (12% - 88%) between B cells
 in the PB pool and those in the GC, suggesting that substantial 
 recruitment of MBCs into GCs is possible [Turner20].
 
 Adjuvants and Calcium signaling on the B cell
 activation are two major factors that may need to be mentioned too.
 
-AUTHOR REPLY: We now mention these factors at the end of the discussion section (line 380) :
+AUTHOR REPLY: We now mention these factors at the end of the discussion
+section (line 435) :
 
 MANUSCRIPT CHANGES: The effects of adjuvants on B-cell activation can be modeled by
-parametrizing the B-cell activation function $h$ (see Methods) to include
+parametrizing the B-cell activation function h (see Methods) to include
 adjuvant concentration, or by incorporating the latter into a T helper cell model.
 Similar ideas could be used to include the effects of soluble signaling
 species, such as interleukins or Calcium ions.
@@ -122,8 +123,8 @@ high affinithy antibodies depends on the details of the exposure, such as
 epitope concentration, whether the exposure is by vaccination or natural
 infection, etc.
 
-MANUSCRIPT CHANGES: line 315.
-We note that, in the idealized case of a uniform antigen concentration
+MANUSCRIPT CHANGES: line 343:
+We also note that, in the idealized case of a uniform antigen concentration
 profile, the normalized BCR affinities for antigen rise uniformly to a
 plateau around the 5th exposure (Fig. S8). However, the results show a
 sensitivity to the antigen concentration profile, suggesting that the
@@ -136,7 +137,7 @@ Recently, Fab-dimerized glycan-reactive antibodies were discovered (PMID:
 BCRs may preferably bind to the conserved region of subdominant epitopes.
 
 AUTHOR REPLY: We now include the above reference in the introduction section.
-MANUSCRIPT CHANGES: (line 77)
+MANUSCRIPT CHANGES: (line 87)
 The importance of multivalent antigen binding in affinity maturation was
 also shown in the discovery of vaccine-induced Fab-dimerized antibodies
 directed to HIV glycans [Williams21].
@@ -148,7 +149,7 @@ add value in finding that.
 
 AUTHOR REPLY: The above study of an interfacial epitope (Watanabe et al.
 2019) is already mentioned in the  original manuscript (as ref #9) in the
-introduction (lines 38 and 65).  The IgG dependence suggests that the Ab
+introduction (lines 39 and 65).  The IgG dependence suggests that the Ab
 might protect by ADCC, which is mentioned in the first paragraph on p. 3.
 Thus, no manuscript modifications were made in response to this comment.
 
@@ -163,7 +164,7 @@ that the predominant reason for low bnAb prevalence was not competition,
 but other factors, such as immune tolerance. We now refer to it in the
 discussion section.
 
-MANUSCRIPT CHANGES: (line 376)
+MANUSCRIPT CHANGES: (line 426)
 For example, Keating et al. (2020) employed several methods of inhibiting GC
 formation in mice to show that the proportion of bnAbs in GC-inhibited
 mice was not increased relative to wild-type mice or untreated mice. The

@@ -78,14 +78,15 @@ includes:
 PMID: 33083735 (Yan & Wang 2020) where cooperative/competitive binding was
 modelled in the context of bnAb induction; 
 
-AUTHOR REPLY: We now reference this publication in two places in the manuscript:
+AUTHOR REPLY: We now reference this publication in two places in the
+manuscript:
 
-MANUSCRIPT CHANGES (Results line 163):
+MANUSCRIPT CHANGES (Results line 179):
 We note that a similar approach to model clonal competition was used by
 Yang & Wang 2020, who introduced interaction parameters to represent Ag
 binding interference from Abs produced by earlier generations of B-cells.
 
-MANUSCRIPT CHANGES (Methods line 606):
+MANUSCRIPT CHANGES (Methods line 687):
 We note that the occlusion tensor is similar in spirit to the interaction
 matrix used by Yan & Wang 2020. However, as these authors had a different
 purpose, specifically, to model synergistic vs. antagonistic effects of
@@ -99,8 +100,8 @@ simulated, suggesting that cross-reactive sequences can already be
 amplified by cocktail or/and repeated immunizations as well, 
 
 AUTHOR REPLY: We now refer to this publication in the discussion section:
-MANUSCRIPT CHANGES (line 382):
 
+MANUSCRIPT CHANGES (line 438):
 Further, more sophisticated approaches that explicitly model BCR evolution in
 sequence space and/or compute BCR/Ag binding affinity using structural models have been developed.
 For example, Robert et al (2021)
@@ -115,7 +116,7 @@ PMID:34917089 where the authors propose that adjusting antigen dose can
 improve the survive of bnAb precursors; 
 
 AUTHOR REPLY: We now refer to this publication in the discussion section:
-MANUSCRIPT CHANGES (line 370):
+MANUSCRIPT CHANGES (line 400):
 
 [T]he strategy could prove useful to expand the number of initial
 low-affinity B-cell lineages targeting rare epitopes against which
@@ -126,9 +127,10 @@ COVID vaccine efficacy [Garg21].
 PMID: 32127549, where the authors propose an ODE model for competing
 lineages in GCs in the light of bnAb induction.
 
-AUTHOR REPLY: We now cite this study in the context of our modeling summary in Results
-MANUSCRIPT CHANGES (line 126):
+AUTHOR REPLY: We now cite this study in the context of our modeling
+summary in Results 
 
+MANUSCRIPT CHANGES (line 137):
 [Q]ualitatively the same results were obtained by assuming that the
 amount of T-cell help is equal to BCR activation by binding to antigen. 
 However, the reason for the  similar results obtained here could be the
@@ -159,9 +161,9 @@ or mask the HA head. Both of the vaccine strategies that the reviewer
 mentions are expected to be advantageous. We expanded the discussion
 section to reflect the reviewer's comment.
 
-MANUSCRIPT CHANGES (line 382) : For the practical purpose of universal vaccine
-design, we can summarize the interpretation of our simulation results as
-follows.  HA stem epitopes presented on influenza virions are
+MANUSCRIPT CHANGES (line 446) : For the practical purpose of universal
+vaccine design, we can summarize the interpretation of our simulation
+results as follows.  HA stem epitopes presented on influenza virions are
 immuno-subdominant due to an inability to recruit bivalently-binding
 BCRs, combined other causes of subdominance. Even if vaccination with
 soluble antigen ectodomains elicited an anti-stem response, it would not
@@ -169,9 +171,10 @@ be boosted in secondary GCs formed upon subsequent natural reinfection,
 because the corresponding B-cells would be unable to bind antigen
 bivalently. It remains to be shown whether this disadvantage could be
 overcome by devising vaccines that present stem epitopes for bivalent
-binding, \eg~by using engineered immunogens presented on nanoparticles,\cite{corbett19}
-possibly in a mosaic format\cite{cohen21}, or by immunizing with cocktails with very
-similar stems but diverse heads\cite{glanville20}.
+binding, eg, by using engineered immunogens presented on
+nanoparticles [Corbett19], possibly in a mosaic format[Cohen21], or
+by immunizing with cocktails with very similar stems but diverse
+heads[Ives20].
 
 
 Minor:
@@ -187,7 +190,7 @@ However, although the study demonstrates that stem epitopes are
 accessible to antibodies, because of rotational averaging, only one Fab
 of the stem antibody could be placed with certainty; thus the valency of
 antibody binding to the stem is not known. We incorporated this point
-into the intriduction (line 65)
+into the intriduction (line 72):
 
 MANUSCRIPT CHANGES:
 Harris et al. (2013) used cryo-electron tomography (cryo-ET) to estimate the 
@@ -230,14 +233,15 @@ physiological Tfh modulation in the future.
 AUTHOR REPLY: Yes, we did use T-cell help in some simulations.  However, 
 as we have now clarified in the new version of the manuscript (see
 below), our results did not differ qualitatively.  This maybe because of
-the simplicity of the T cell model (which used a single T helper cell type),
-and because we ultimately used the same experimental data to adjust the model 
-to match GC size in single-antigen simulations.
-The T-cell model and the related simulations are described in SI section 6.
+the simplicity of the T cell model (which used a single T helper cell
+type), and because we ultimately used the same experimental data to
+adjust the model  to match GC size in single-antigen simulations. The
+T-cell model and the related simulations are described in SI section 6.
 
 MANUSCRIPT CHANGES:
-[I]n the main text, we present simulation results obtained without an explicit T-cell model.
-However, several validation calculations performed with the model are described in SI APpendix.
+[I]n the main text, we present simulation results obtained without an
+explicit T-cell model. However, several validation calculations performed
+with the model are described in SI Appendix.
 
 Also, I think the present results are really promising in the context of
 how to design vaccine antigens with specific distancing between good and
@@ -250,7 +254,7 @@ it is difficult to say precisely how similar or dissimilar the epitopes
 of interest need to be to optimize for breadth and affinity. We modified
 the discussion to reflect the comment, as follows.
 
-MANUSCRIPT CHANGES (line 382) :
+MANUSCRIPT CHANGES (line 456) :
 While immunization with diverse coronavirus receptor binding domains
 presented as mosaic nanoparticles elicited a broad antibody response,
 including to strains not present in the vaccine [Cohen21], when this

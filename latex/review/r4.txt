@@ -48,8 +48,8 @@ there is a considerable amount of exposed surface outside of the RBM. A
 similar situation prevails on the influenza HA head where there are a few
 immunodominant sites.
 
-AUTHOR REPLY: We agree with the reviewer's points, and have incorporated them
-in a modified discussion (lines , as follows:
+AUTHOR REPLY: We agree with the reviewer's points, and have incorporated
+them in a modified discussion (line 442), as follows:
 
 MANUSCRIPT CHANGES: However, binding valency alone cannot adequately
 explain immunodominance  that arises in vaccination using soluble HA
@@ -58,14 +58,15 @@ similar antibody accessibilities. Therefore, other factors, such as
 antigen plasticity, low natural germline precursor frequency, repertoire
 filtering due to self-reactivity, or reduced T-cell help [Erwin20], must
 also contribute. For example, Keating et al. 2020 employed several
-methods of partially inhibiting GC formation in mice, and showed that the proportion of
-bnAbs in GC-inhibited mice was not increased relative to wild-type mice
-or untreated mice. The findings were used to argue that the predominant
-reason for low bnAb prevalence was not competition between antibody
-lineages, but other factors, such as removal of bnAb precursors due to
-immune tolerance mechanisms [Keating20]. Such factors could also explain
-why antibodies produced in natural infections such as SARS-Cov-2 tend to target relatively
-few antigenic epitopes, despite high overall antigen accessibility [Barnes20].\cite{barnes20}
+methods of partially inhibiting GC formation in mice, and showed that the
+proportion of bnAbs in GC-inhibited mice was not increased relative to
+wild-type mice or untreated mice. The findings were used to argue that
+the predominant reason for low bnAb prevalence was not competition
+between antibody lineages, but other factors, such as removal of bnAb
+precursors due to immune tolerance mechanisms [Keating20]. Such factors
+could also explain why antibodies produced in natural infections such as
+SARS-Cov-2 tend to target relatively few antigenic epitopes, despite high
+overall antigen accessibility [Barnes20].
 
 
 2. The major conclusion of the manuscript is that bivalent and
@@ -87,19 +88,20 @@ data of Harris et al. (2013) suggests that the majority of HA stems on
 virions are accessible to monovalent binding by antibody C179 (at least
 in the absence of anti-head Abs).
 
-MANUSCRIPT CHANGES: The model used here relies on simple assumptions to
-show that for diffent epitopes with similar accessibilities, which can be
-interpreted as similar effective concentrations, immunosubdominance can
-be explained by differences in the antibody binding valency. This
-scenario appears applicable to the case of  natural immunity against
-influenza hemagglutinins, as Harris et al. 2013 have shown that most of
-the trimeric HA spikes are able to bind an anti-stem antibody. The
-arrangement of the spikes makes it likely that bivalent binding would be
-disfavored by energetic strain.[harris13,amitai20] A related scanario
-applies in the case of HIV, in which low spike density makes bivalent
-binding unlikely, but antibodies engineered with long linkers  that could
-bind the same trimeric spike bivalently exhibited >100-fold greater
-potency [Galimidi15]. 
+MANUSCRIPT CHANGES (line 414): The model used here relies on simple
+assumptions to show that for diffent epitopes with similar
+accessibilities, which can be interpreted as similar effective
+concentrations, immunosubdominance can be explained by differences in the
+antibody binding valency. This scenario appears applicable to the case of 
+natural immunity against influenza hemagglutinins, as Harris et al. 2013
+have shown that most of the trimeric HA spikes are able to bind an
+anti-stem antibody. The arrangement of the spikes makes it likely that
+bivalent binding would be disfavored by energetic
+strain.[harris13,amitai20] A related scanario applies in the case of HIV,
+in which low spike density makes bivalent binding unlikely, but
+antibodies engineered with long linkers  that could bind the same
+trimeric spike bivalently exhibited >100-fold greater potency
+[Galimidi15]. 
 
 
 3. One of the limitations of the present study is that it is hard to
@@ -120,30 +122,31 @@ the antigen amount is low, such that doubling the antigen amount could
 translate into large differences in B-cell activation.
 
 MANUSCRIPT CHANGES:
-line <new location? :
-
+line 444 :
 However, BCR/Ag models at all-atom resolution [Conti21,Sprenger21],
 which may be parametrized to account for antigen stability and rigidity,
 may ultimately be required to design actual vaccine antigens and their
 cocktails.
 
-line 300: We caution, however, that this result should be considered qualitative,
-because our model does not incorporate a saturating Ag concentration, which could be done 
-in fugure versions, \eg, by explicitly modeling immune complexes or FDCs.
-Thus, the strong dependence of B-cell response on the Ag concentration
-is most likely relevant in a scenario where the total antigen amount is low.
+line 324: We caution, however, that this result should be considered
+qualitative, because our model does not incorporate a saturating Ag
+concentration, which could be done  in fugure versions, eg, by explicitly
+modeling immune complexes or FDCs. Thus, the strong dependence of B-cell
+response on the Ag concentration is most likely relevant in a scenario
+where the total antigen amount is low.
 
 4. A major determinant of immunogenicity is the adjuvant. It would be
 useful if the authors could mention in the Discussion whether/how they
 think such effects can be incorporated into their model
 
-AUTHOR REPLY: We now mention incorporating adjuvant in the discussion section (line 380) :
+AUTHOR REPLY: We now mention incorporating adjuvant in the discussion
+section (line 436) :
 
-MANUSCRIPT CHANGES: The effects of adjuvants on B-cell activation can be modeled by
-parametrizing the B-cell activation function h (see Methods) to include
-adjuvant concentration, or by incorporating the latter into a T helper cell model.
-Similar ideas could be used to include the effects of soluble signaling
-species, such as interleukins or Calcium ions.
+MANUSCRIPT CHANGES: The effects of adjuvants on B-cell activation can be
+modeled by parametrizing the B-cell activation function h (see Methods)
+to include adjuvant concentration, or by incorporating the latter into a
+T helper cell model. Similar ideas could be used to include the effects
+of soluble signaling species, such as interleukins or Calcium ions.
 
 5. In Figure 1 which subtypes of influenza A were examined and over how many years?
 
@@ -159,14 +162,14 @@ cocktails are debatable, in most cases differences are quite small, both
 for influenza and SARS-CoV-2. 
 
 AUTHOR REPLY: We have modified penultimate paragraph in the discussion
-section (lines 371--375) to incorporate the reviewer's comment, as follows
+section (line 406) to incorporate the reviewer's comment, as follows
 
 MANUSCRIPT CHANGES: We note that multi-antigen vaccination cocktails have
 been designed, in which the epitopes that are conserved between the
 antigens are at effectively higher concentration than variable epitopes
-[kanekiyo2019,cohen2021,glanville2020]. In particular, mosaic
+[Kanekiyo2019,Cohen2021,Ives2020]. In particular, mosaic
 nanoparticles appear to elicit a broader antibody response in animal
-experiments, compared to cocktail immunizations [kanekiyo2019,cohen2021].
+experiments, compared to cocktail immunizations [Kanekiyo2019,Cohen2021].
 However, it remains to be shown whether such vaccines will lead to
 improved protection against highly mutable pathogens in the clinic.
 
