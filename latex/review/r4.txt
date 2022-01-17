@@ -51,22 +51,22 @@ immunodominant sites.
 AUTHOR REPLY: We agree with the reviewer's points, and have incorporated
 them in a modified discussion (line 442), as follows:
 
-MANUSCRIPT CHANGES: However, binding valency alone cannot adequately
-explain immunodominance  that arises in vaccination using soluble HA
-ectodomains, because head and stem epitopes would be expected to have
-similar antibody accessibilities. Therefore, other factors, such as
-antigen plasticity, low natural germline precursor frequency, repertoire
-filtering due to self-reactivity, or reduced T-cell help [Erwin20], must
-also contribute. For example, Keating et al. 2020 employed several
-methods of partially inhibiting GC formation in mice, and showed that the
-proportion of bnAbs in GC-inhibited mice was not increased relative to
-wild-type mice or untreated mice. The findings were used to argue that
-the predominant reason for low bnAb prevalence was not competition
-between antibody lineages, but other factors, such as removal of bnAb
-precursors due to immune tolerance mechanisms [Keating20]. Such factors
-could also explain why antibodies produced in natural infections such as
-SARS-Cov-2 tend to target relatively few antigenic epitopes, despite high
-overall antigen accessibility [Barnes20].
+MANUSCRIPT CHANGES: However, binding valency alone cannot  explain
+immunodominance  that arises in vaccination using soluble HA ectodomains
+because head and stem epitopes would be expected to have similar antibody
+accessibilities. Therefore, other factors, such as antigen plasticity,
+low natural germline precursor frequency, repertoire filtering due to
+self-reactivity, or reduced T-cell help [Erwin20], must also contribute.
+For example, Keating et al. 2020 employed several methods of partially
+inhibiting GC formation in mice, and showed that the proportion of bnAbs
+in GC-inhibited mice was not increased relative to wild-type mice or
+untreated mice. These findings were used to argue that the predominant
+reason for low bnAb prevalence was not competition between antibody
+lineages, but rather other factors, such as removal of bnAb precursors due to
+immune tolerance mechanisms [Keating20]. Such factors could also explain
+why antibodies produced in natural infections such as SARS-Cov-2 tend to
+target relatively few antigenic epitopes, despite high overall antigen
+accessibility [Barnes20].
 
 
 2. The major conclusion of the manuscript is that bivalent and
@@ -97,7 +97,7 @@ natural immunity against influenza hemagglutinins, as Harris et al. 2013
 have shown that most of the trimeric HA spikes are able to bind an
 anti-stem antibody. The arrangement of the spikes makes it likely that
 bivalent binding would be disfavored by energetic
-strain.[harris13,amitai20] A related scanario applies in the case of HIV,
+strain [Harris13,Amitai20]. A related scanario applies in the case of HIV,
 in which low spike density makes bivalent binding unlikely, but
 antibodies engineered with long linkers  that could bind the same
 trimeric spike bivalently exhibited >100-fold greater potency
@@ -129,11 +129,11 @@ may ultimately be required to design actual vaccine antigens and their
 cocktails.
 
 line 324: We caution, however, that this result should be considered
-qualitative, because our model does not incorporate a saturating Ag
-concentration, which could be done  in fugure versions, eg, by explicitly
-modeling immune complexes or FDCs. Thus, the strong dependence of B-cell
-response on the Ag concentration is most likely relevant in a scenario
-where the total antigen amount is low.
+qualitative because our model does not incorporate a saturating Ag
+concentration, which could be done in future versions, eg, by explicitly
+modeling immune complexes or FDCs. Thus, the strong dependence of the
+B-cell response on the Ag concentration is most likely relevant in a
+scenario where the total antigen amount is low.
 
 4. A major determinant of immunogenicity is the adjuvant. It would be
 useful if the authors could mention in the Discussion whether/how they

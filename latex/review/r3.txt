@@ -105,7 +105,7 @@ MANUSCRIPT CHANGES (line 438):
 Further, more sophisticated approaches that explicitly model BCR evolution in
 sequence space and/or compute BCR/Ag binding affinity using structural models have been developed.
 For example, Robert et al (2021)
-approximated B-cell and Antigen interactions by discretizing the epitope
+approximated B-cell and antigen interactions by discretizing the epitope
 and paratope on a lattice, and using an empirical inter-residue
 potential. The authors were able to capture key properties 
 of multi-antigen vaccinations, such as increased cross-reactivity in
@@ -130,13 +130,12 @@ lineages in GCs in the light of bnAb induction.
 AUTHOR REPLY: We now cite this study in the context of our modeling
 summary in Results 
 
-MANUSCRIPT CHANGES (line 137):
-[Q]ualitatively the same results were obtained by assuming that the
-amount of T-cell help is equal to BCR activation by binding to antigen. 
-However, the reason for the  similar results obtained here could be the
-simplicity of our model, as we did not consider multiple distinct T
-helper cell populations, which were shown to be important for bnAb
-elicitation in a recent computational study [Erwin20].
+MANUSCRIPT CHANGES (line 137): [Q]ualitatively the same results were
+obtained by assuming that the amount of T-cell help is equal to BCR
+activation by binding to antigen.  However, the reason for the  similar
+results could be the simplicity of our model, as we did not consider
+multiple distinct T helper cell populations, which were shown to be
+important for bnAb elicitation in a recent computational study [Erwin20].
 
 Can the authors discuss a bit more why only the stem-recognizing
 BCR/antibodies would get selective advantage, and not the ones
@@ -161,11 +160,11 @@ or mask the HA head. Both of the vaccine strategies that the reviewer
 mentions are expected to be advantageous. We expanded the discussion
 section to reflect the reviewer's comment.
 
-MANUSCRIPT CHANGES (line 446) : For the practical purpose of universal
+MANUSCRIPT CHANGES (line 447) : For the practical purpose of universal
 vaccine design, we can summarize the interpretation of our simulation
 results as follows.  HA stem epitopes presented on influenza virions are
 immuno-subdominant due to an inability to recruit bivalently-binding
-BCRs, combined other causes of subdominance. Even if vaccination with
+BCRs, combined with other causes of subdominance. Even if vaccination with
 soluble antigen ectodomains elicited an anti-stem response, it would not
 be boosted in secondary GCs formed upon subsequent natural reinfection, 
 because the corresponding B-cells would be unable to bind antigen
@@ -194,7 +193,7 @@ into the intriduction (line 72):
 
 MANUSCRIPT CHANGES:
 Harris et al. (2013) used cryo-electron tomography (cryo-ET) to estimate the 
-average spacing between HA spikes on influenza virions at 14nm, which
+average spacing between HA spikes on influenza virions to be 14nm, which
 appears to be compatible with bivalent binding of antibodies to the HA
 stem, based on the docking of an unrelated mouse IgG antibody.
 However, although the study demonstrated that stem epitopes are
@@ -238,10 +237,10 @@ type), and because we ultimately used the same experimental data to
 adjust the model  to match GC size in single-antigen simulations. The
 T-cell model and the related simulations are described in SI section 6.
 
-MANUSCRIPT CHANGES:
+MANUSCRIPT CHANGES (line 140) :
 [I]n the main text, we present simulation results obtained without an
 explicit T-cell model. However, several validation calculations performed
-with the model are described in SI Appendix.
+with the model are described in Supplementary Material.
 
 Also, I think the present results are really promising in the context of
 how to design vaccine antigens with specific distancing between good and

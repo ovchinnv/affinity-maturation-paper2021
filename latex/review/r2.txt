@@ -75,8 +75,8 @@ cells and implications.
 
 AUTHOR REPLY: We now mention the citation (new ref #46) in Results (line 216) :
 
-MANUSCRIPT CHANGES: A recent study comparing the early plasmablast (PB)
-response with GC B cells obtained by fine-needle aspiration, found a
+MANUSCRIPT CHANGES: A recent study that compared the early plasmablast (PB)
+response with GC B cells obtained by fine-needle aspiration found a
 variable and sometimes large clonal overlap (12% - 88%) between B cells
 in the PB pool and those in the GC, suggesting that substantial 
 recruitment of MBCs into GCs is possible [Turner20].
@@ -128,7 +128,7 @@ We also note that, in the idealized case of a uniform antigen concentration
 profile, the normalized BCR affinities for antigen rise uniformly to a
 plateau around the 5th exposure (Fig. S8). However, the results show a
 sensitivity to the antigen concentration profile, suggesting that the
-number of exposures needed to elicit high-affinity antibodies generally
+number of exposures needed to elicit high-affinity antibodies
 depends on the details of the exposure, such as epitope concentration, or
 whether the exposure is by vaccination or natural infection.
 
@@ -161,15 +161,15 @@ AUTHOR REPLY: This study used several methods of inhibiting GC formation
 in mice to show that the proportion of bnAbs in GC-inhibited mice was not
 increased relative to wild-type mice or untreated mice, and thus to argue
 that the predominant reason for low bnAb prevalence was not competition,
-but other factors, such as immune tolerance. We now refer to it in the
+but rather other factors, such as immune tolerance. We now refer to it in the
 discussion section.
 
-MANUSCRIPT CHANGES: (line 426)
+MANUSCRIPT CHANGES: (line 427)
 For example, Keating et al. (2020) employed several methods of inhibiting GC
 formation in mice to show that the proportion of bnAbs in GC-inhibited
 mice was not increased relative to wild-type mice or untreated mice. The
 findings were used to argue that the predominant reason for low bnAb
-prevalence was not competition between antibody lineages, but other
+prevalence was not competition between antibody lineages, but rather other
 factors, such as removal of bnAb precursors due to immune tolerance
 mechanisms [Keating20].
 
