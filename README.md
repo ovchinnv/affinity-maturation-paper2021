@@ -6,6 +6,13 @@ shown in the figures of the paper **A coarse-grained model of affinity
 maturation indicates the importance of B-cell receptor avidity in epitope
 subdominance**, 2021 by *V. Ovchinnikov and M. Karplus* (submitted).
 
+Update: Tha paper has been published in Frontiers in Immunology, and can
+be cited as Ovchinnikov & Karplus, A coarse-grained model of affinity
+maturation indicates the importance of B-cell receptor avidity in
+epitope subdominance, 2022. Front. Immunol. 13:816634,
+https://doi.org/10.3389/fimmu.2022.816634
+
+
 ## Code Summary
 
 The simulations of affinity maturation performed here are implemented as
